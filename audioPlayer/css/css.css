@@ -1,0 +1,173 @@
+body {
+    background: #000;
+}
+
+.musicAudio {
+    width: 200px;
+    height: 400px;
+    left: 50%;margin-left: -100px;
+    margin-top: -130px;
+    border: 1px solid #F0FFFF;
+    /*-webkit-border-radius: 5px;*/
+    /*-moz-border-radius: 5px;*/
+    border-radius: 5px 5px 11px 11px;
+    /*z-index: 1;*/
+    /*position: relative;*/
+}
+.open #openUrl {
+    width: 150px;
+    height: 150px;
+    /*border: 1px solid #f00;*/
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin: 85px auto;
+    background: url(../img/image.png) no-repeat center;
+    -webkit-background-size: 150px 150px;
+    background-size: 150px 150px;
+    /*position: relative;*/
+    /*-webkit-animation: rotate 10s infinite linear;*/
+    /*-o-animation: rotate 10s infinite linear;*/
+    /*animation: rotate 10s infinite linear;*/
+}
+/*@-webkit-keyframes rotate {*/
+/*from{ -webkit-transform: rotate(0deg); }*/
+/*to{ -webkit-transform: rotate(360deg); }*/
+/*}*/
+/*@-o-keyframes rotate {*/
+/*from{ -o-transform: rotate(0deg); }*/
+/*to{ -o-transform: rotate(360deg); }*/
+/*}*/
+/*@keyframes rotate {*/
+/*from{ transform: rotate(0deg); }*/
+/*to{ transform: rotate(360deg); }*/
+/*}*/
+#bow {
+    /*圆弧*/
+     /*width: 200px;*/
+     /*height: 150px;*/
+     /*border-bottom: 3px solid #f604df;*/
+     /*border-radius: 0 0 100% 100%;*/
+     /*margin-top: 40px;*/
+     /*margin-left: -25px;*/
+     /*position: absolute;*/
+    width: 200px;
+    height: 4px;
+    background: #f604df;
+    margin-top: -50px;
+    margin-left: 50px;
+    border-radius: 3px;
+    position: absolute;
+}
+#button {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 100%;
+    margin-top: -2.5px;
+    position: relative;
+}
+#openUrl input {
+    width: 150px;
+    height: 150px;
+    margin-top: 0;
+    margin-left: 0;
+    opacity: 0;
+}
+#text input {
+    width: 300px;
+    height: 40px;
+    border: 0;
+    color: #7FFFD4;
+    font-size: 20px;
+    text-align: center;
+    background: #000;
+    margin-top: -30px;
+    margin-bottom: 20px;
+    overflow: hidden; /*自动隐藏文字*/
+    text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+    white-space: nowrap;/*强制不换行*/
+}
+.musicAudio {
+    width: 300px;
+    /*text-align: center;*/
+    margin: auto;
+}
+#musicAudio {
+    width:300px;
+    height:50px;
+    font-size: 0;
+    background-color: #F5F5DC;
+    border-radius: 10px;
+}
+#musicAudio *{
+    display: inline-block;
+    /*垂直对齐*/
+    vertical-align: middle;
+}
+#musicAudioPlayAndPause {
+    line-height: 40px;
+    width:40px;
+    height:40px;
+    margin:5px 5px 5px 25px;
+    border-radius: 50%;
+}
+#musicAudioTime {
+    margin:5px 5px;
+    float: right;
+    font-size: 13px
+}
+#musicAudioProgress, #musicAudioProgressPar {
+    height: 4px;
+    -webkit-border-radius: 10px;
+}
+#musicAudioProgressPar{
+    width:160px;
+    background-color: #00FFFF;
+}
+#musicAudioProgress{
+    width:0;
+    background-color: #00CD66;
+}
+.show {
+    width: 150px;
+    margin-top: -15px;
+    margin-left: 15px;
+}
+#musicAudioTime {
+    margin-right: -30px;
+}
+
+/*画布*/
+#canvas {
+    /*margin: 10px;*/
+    /*padding: 10px;*/
+    /*inset:3D嵌入边框*/
+    /*border: thin inset #ddd;*/
+    background-color: #000;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+/*外部图片加载进度条CSS*/
+.loading1 {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: #fff;
+}
+.loading1 .pic1 {
+    width: 64px;
+    height: 64px;
+    background: url(../img/139.gif);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}

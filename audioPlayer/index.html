@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Audio-player</title>
+
+    <link href="css/css.css" type="text/css" rel="stylesheet" />
+
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/js.js"></script>
+    <script src="js/canvas.js"></script>
+</head>
+
+<body>
+    <!--加载进度动画-->
+    <div class="loading1">
+        <div class="pic1"></div>
+    </div>
+
+    <!--control 属性供添加播放、暂停和音量控件-->
+    <div class="musicAudio" >
+        <!--打开本地资源and显示歌曲名称-->
+        <div class="open">
+            <!--打开本地文件-->
+            <div id="openUrl">
+                <!--表单上传文件-->
+                <input id="rotateImg" type="file" onchange="upload(this)">
+            </div>
+            <!--调节音量-->
+            <div id="bow" onclick="soundSize();">
+                <div id="button"></div>
+            </div>
+
+            <!--歌曲名称-->
+            <div id="text">
+                <input type="text" id="songName" value="请打开本地文件" readonly="true" >
+            </div>
+        </div>
+
+        <audio src="" id="audio">
+            Your browser does not support the audio tag.
+        </audio>
+        <div id="musicAudio">
+            <!--暂停or播放-->
+            <img id="musicAudioPlayAndPause" src="img/u=2796151082,586743915&fm=27&gp=0.jpg" onclick="playOrPaused(this);RotateImg();">
+            <!--进度条and时间点-->
+            <div class="show">
+                    <p id="musicAudioTime">
+                        <span id="currentTime">00:00</span>
+                        <span>&#47;</span>
+                        <span id="totalTime">12:00</span>
+                    </p>
+                    <div id="musicAudioProgressPar">
+                        <div id="musicAudioProgress"></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!--背景画布制作-->
+    <canvas id="canvas" width="1000" height="300">
+        Canvas not supported.
+    </canvas>
+
+
+    <script>
+        //loading1：外部图片加载
+        document.onreadystatechange = function() {
+            if(document.readyState == "complete") {
+                $(".loading1").fadeOut(3000);
+            }
+        };
+
+    </script>
+</body>
+</html>
